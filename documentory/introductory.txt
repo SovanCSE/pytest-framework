@@ -1,0 +1,51 @@
+Unit Test:
+    Unit testing is a software testing method by which individual units of
+    source code are tested to determine whether they are fit to use.
+    A good programmer always write some automated test to perform some test
+    cases.
+
+Python provide three basic framework to perform this testing stuff:
+ 1. unittest
+ 2. nose
+ 3. pytest
+Among on this pytest is best(will discuss later why pytest best)
+
+To install the pytest run the below simple command:
+
+ >> pip install pytest
+
+ Pytest discovery rules:===>
+
+  Rule 1:
+      All unit test function & file name must have to start with test underscore(test_) keyword as
+      prefix to understand the pytest that following function or file is written for testing
+      purpose.
+
+     Running ways:
+      If you run the below commands then this gonna to look for all files & subdirectories
+      from  current localtion which is having prefix as test underscore(test_) after that
+      inside of those files gonna to run all functions which is having  prefix as test
+      underscore(test_).
+      >> python -m pytest
+      or
+      >> py.test
+      or
+      >> pytest
+      or
+      >> python -m pytest {test directory}  ==> Manually youcan pass your test directory also
+
+      Below command use to list down your test file with passed or failed status:
+       >> py.test -v
+
+      Below command use to get list down test fiel with status & messages on reason skip:
+       >> py.test -v -rxs
+
+
+
+
+
+
+
+
+
+

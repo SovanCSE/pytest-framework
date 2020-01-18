@@ -1,0 +1,51 @@
+Topic
+1) Skip tests ==> (To skip any of the test function for not testing of now)
+
+ Example:
+  import pytest
+  @pytest.mark.skip(reason='I don"t want to test as of now')
+  def test_calc_total_v2():
+    total = mathlib.calc_total(10,20)
+    assert total == 30
+
+2) selectively run tests using their name ==>
+
+    Below command use to only run only the test fuctions which are containing function name as
+    "multipy":
+    >> pytest -k multipy -v
+
+3) Custom markers ==>(If you wnat to run some test only depend on os)
+
+    As below example we want to run some test in windows & other on mac system only
+
+    import pytest
+
+    @pytest.mark.windows
+    def test_windows_1():
+        assert True
+
+    @pytest.mark.windows
+    def test_windows_2():
+        assert true
+
+    @pytest.mark.mac
+    def test_mac_1():
+        assert True
+
+    @pytest.mark.mac
+    def test_mac_2():
+        assert True
+
+    Follow the below command to run only windows oriented tests:
+      >> pytest -m  windows -v
+
+    Follow the below command to run only mac oriented tests:
+      >> pytest -m  mac -v
+
+    Follow the below command to run all test except for windows:
+      >> pytext -m "not windows" -v
+
+
+
+
+
